@@ -1,0 +1,61 @@
+.blogTeacher {
+  width: 90%;
+  margin: 57px auto 76px;
+  padding: 20px 0px 20px 26px;
+  background-color: #FFFCFC;
+}
+
+.all-autumn {
+  margin-top: 40px;
+}
+.all-autumn__inner {
+  width: 90%;
+  margin: 0 auto;
+  -webkit-box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.25);
+          box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.25);
+  background: #fff9f9;
+  padding: 20px;
+}
+.all-autumn-table {
+  width: 100%;
+  margin: 0 auto 42;
+  border-collapse: collapse;
+}
+.all-autumn-table th,
+.all-autumn-table td {
+  text-align: center;
+  padding: 15px 10px;
+  border: 1px solid silver;
+}
+
+.group-btn {
+  margin-top: 20px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 8px;
+}
+
+.all-style {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 30px;
+  height: 30px;
+}
+
+.btn-table {
+  background-color: green;
+}

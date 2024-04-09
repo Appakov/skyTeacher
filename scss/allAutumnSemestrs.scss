@@ -1,0 +1,55 @@
+.blogTeacher {
+    width: 90%;
+    margin: 57px auto 76px;
+    padding: 20px 0px 20px 26px ;
+    background-color: #FFFCFC;
+}
+
+.all-autumn {
+    margin-top: 40px;
+
+    &__inner {
+        width: 90%;
+        margin: 0 auto;
+        box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.25);
+        background: #fff9f9;
+        padding: 20px;
+    }
+
+    &-table {
+
+        width: 100%;
+        margin: 0 auto 42;
+        border-collapse: collapse;
+
+
+
+
+        th,
+        td {
+            text-align: center;
+            padding: 15px 10px;
+            border: 1px solid silver;
+        }
+    }
+}
+
+.group-btn {
+    margin-top: 20px;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 8px;
+}
+
+.all-style {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 30px;
+    height: 30px;
+}
+
+.btn-table {
+    background-color: green;
+}

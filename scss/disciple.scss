@@ -1,0 +1,175 @@
+.disciple {
+    margin-top: 40px;
+
+    &-btn {
+        border: none;
+        background: transparent;
+        color: silver;
+        width: 129px;
+        height: 53px;
+        margin-bottom: 4px;
+    }
+}
+
+.blogTeacher {
+    width: 90%;
+    margin: 57px auto 76px;
+    padding: 20px 0px 20px 26px;
+    background-color: #FFFCFC;
+}
+
+.hidden {
+    display: none;
+}
+
+.preveiw {
+    width: 80%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 8px;
+    margin-bottom: 4px;
+}
+
+.window {
+    width: 90%;
+    margin: 0 auto;
+    box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.25);
+    background: #fff9f9;
+    padding: 20px;
+}
+
+.journal {
+
+    &-table {
+        width: 90%;
+        margin: 0 auto 42px;
+
+        border-collapse: collapse;
+
+        th,
+        td {
+            border: 1px solid black;
+            padding: 5px 0px;
+            text-align: center;
+        }
+
+    }
+
+    &-date {
+
+        height: 80px;
+        max-width: 20px;
+    }
+
+    &-date__header {
+        margin-top: 35px;
+        transform: rotate(-90deg);
+        white-space: nowrap;
+    }
+
+    &-pad__our {
+        width: 133px;
+        height: 53px;
+        border-radius: 10px;
+        border: none;
+    }
+
+    &-practic {
+        background-color: #F9C81C;
+    }
+
+    &-lecture {
+        background: rgba(249, 200, 28, 0.36);
+    }
+
+    &-btn-group {
+        margin-bottom: 23px;
+        display: flex;
+        align-items: center;
+        gap: 14px;
+
+    }
+}
+
+.statement {
+    width: 95%;
+    margin: 0 auto 42px;
+
+    border-collapse: collapse;
+
+    th {
+        border: 1px solid black;
+        padding: 10px;
+        text-align: center;
+    }
+
+    td {
+        border: 1px solid black;
+        padding: 10px;
+        text-align: center;
+    }
+
+}
+
+.exercise {
+    &-table {
+        width: 70%;
+        margin: 0 auto 42px;
+        border-collapse: collapse;
+
+        th {
+            border: 1px solid black;
+            padding: 10px;
+            text-align: center;
+            background-color: silver;
+        }
+
+        td {
+            border: 1px solid black;
+            padding: 10px;
+            text-align: center;
+        }
+    }
+
+    &-btn {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-bottom: 19px;
+    }
+
+    &-create {
+        width: 122px;
+        height: 42px;
+        background-color: #F9C81C;
+        color: #fff;
+        border: none;
+        border-radius: 10px;
+    }
+}
+
+.loadInformation {
+    margin-top: 70px;
+
+    &-table {
+
+        width: 95%;
+        margin: 0 auto 42px;
+        border-collapse: collapse;
+
+        th {
+            border: 1px solid black;
+            padding: 10px;
+            text-align: center;
+            background-color: silver;
+        }
+
+        td {
+            border: 1px solid black;
+            padding: 10px;
+            text-align: center;
+        }
+    }
+}

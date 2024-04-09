@@ -1,0 +1,93 @@
+.testing {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 100%;
+  height: 90vh;
+}
+.testing__inner {
+  margin: 0 auto;
+  width: 90%;
+  overflow: auto;
+  height: 80vh;
+  -webkit-box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.25);
+          box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.25);
+  background: #fffdfd;
+  -webkit-backdrop-filter: blur(20px);
+          backdrop-filter: blur(20px);
+  border: 1px solid #fff;
+}
+.testing__tab {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin: 34px 80px 30px;
+}
+.testing__link {
+  border-radius: 10px;
+  -webkit-box-shadow: inset 0 4px 4px 0 rgba(0, 0, 0, 0.25);
+          box-shadow: inset 0 4px 4px 0 rgba(0, 0, 0, 0.25);
+  background: rgba(250, 235, 252, 0.69);
+  padding: 12.5px 100px;
+  color: #d9d3d3;
+}
+.testing__link.active {
+  color: #000;
+}
+.testing__test-btn {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: end;
+  margin-right: 22px;
+  gap: 20px;
+  margin-bottom: 15px;
+}
+.testing__btn {
+  margin-top: 17px;
+  padding: 12.5px 17px 12.5px 92px;
+  -webkit-box-shadow: inset 0 4px 4px 0 rgba(0, 0, 0, 0.25);
+          box-shadow: inset 0 4px 4px 0 rgba(0, 0, 0, 0.25);
+  background: rgba(250, 235, 252, 0.69);
+  border-radius: 10px;
+  border: none;
+}
+.testing__table {
+  margin: 0 auto;
+  width: 98%;
+  border: 1px solid #000;
+  background: #fffdfd;
+  border-collapse: collapse;
+}
+.testing__table th,
+.testing__table td {
+  text-align: center;
+  padding: 21px 15px;
+  border: 1px solid #000;
+}
+.testing__tab-block {
+  overflow-y: auto;
+  width: 85%;
+  margin: 0 auto;
+  height: 381px;
+  -webkit-box-shadow: inset 0 4px 4px 0 rgba(0, 0, 0, 0.25);
+          box-shadow: inset 0 4px 4px 0 rgba(0, 0, 0, 0.25);
+  background: rgba(250, 235, 252, 0.69);
+}
+.testing__tab-block > div {
+  display: none;
+}
+.testing__tab-block > div:target {
+  display: block;
+}

@@ -1,0 +1,665 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/core.css">
+    <link rel="stylesheet" href="../css/normalize.css">
+    <link rel="stylesheet" href="../css/disciple.css">
+    <title>Организация вычислительных систем</title>
+</head>
+
+<body>
+    <div class="wrapper">
+        <header class="header">
+            <div class="container">
+                <nav class="nav">
+                    <div class="burger">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </div>
+                    <ul class="menu">
+                        <li class="menu__list">
+                            <a href="home.html" class="menu__link"><ion-icon name="home"></ion-icon></a>
+                        </li>
+                        <li class="menu__list">
+                            <a href="testing.html" class="menu__link"><ion-icon name="receipt"></ion-icon></a>
+                        </li>
+                        <li class="menu__list">
+                            <a href="library.html" class="menu__link"><ion-icon name="book"></ion-icon></a>
+                        </li>
+                        <li class="menu__list">
+                            <a href="#" class="menu__link"><ion-icon name="search"></ion-icon></a>
+                        </li>
+                        <li class="menu__list">
+                            <a href="courses.html" class="menu__link"><ion-icon name="create"></ion-icon></a>
+                        </li>
+                        <li class="menu__list">
+                            <a href="#" class="menu__link"><ion-icon name="chatbubble"></ion-icon></a>
+                        </li>
+                        <li class="menu__list">
+                            <a href="#" class="menu__link"><ion-icon name="people"></ion-icon></a>
+                        </li>
+                        <li class="menu__list">
+                            <a href="notifications.html" class="menu__link"><ion-icon
+                                    name="notifications"></ion-icon></a>
+                        </li>
+                    </ul>
+                    <div class="chatbot-darkmode">
+                        <button class="dark-mode-btn">
+                            <img src="../images/sun.svg" alt="Light mode" class="dark-mode-btn__icon" />
+                            <img src="../images/moon.svg" alt="Dark mode" class="dark-mode-btn__icon" />
+                        </button>
+                    </div>
+                </nav>
+                <div class="modal" id="my-modal">
+                    <div class="modal__box">
+                        <button class="modal__close-btn" id="close-my-modal-btn">
+                            <svg width="23" height="25" viewBox="0 0 23 25" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M2.09082 0.03125L22.9999 22.0294L20.909 24.2292L-8.73579e-05 2.23106L2.09082 0.03125Z"
+                                    fill="#333333" />
+                                <path d="M0 22.0295L20.9091 0.0314368L23 2.23125L2.09091 24.2294L0 22.0295Z"
+                                    fill="#333333" />
+                            </svg>
+                        </button>
+                        <div class="modal-menu">
+                            <div class="modal-menu__icon-list">
+                                <div class="modal__icon">
+                                    <ion-icon name="home"></ion-icon>
+                                </div>
+                                <div class="modal__list">
+                                    <a href="index.html">Главная</a>
+                                </div>
+                            </div>
+                            <div class="modal-menu__icon-list">
+                                <div class="modal__icon">
+                                    <ion-icon name="receipt"></ion-icon>
+                                </div>
+                                <div class="modal__list"><a href="testing.html">Тестирование</a></div>
+                            </div>
+                            <div class="modal-menu__icon-list">
+                                <div class="modal__icon">
+                                    <ion-icon name="book"></ion-icon>
+                                </div>
+                                <div class="modal__list">
+                                    <a href="library.html">Библиотека</a>
+                                </div>
+                            </div>
+                            <div class="modal-menu__icon-list">
+                                <div class="modal__icon">
+                                    <ion-icon name="create"></ion-icon>
+                                </div>
+                                <div class="modal__list"><a href="courses.html">Курсы</a></div>
+                            </div>
+                            <div class="modal-menu__icon-list">
+                                <div class="modal__icon">
+                                    <ion-icon name="chatbubble"></ion-icon>
+                                </div>
+                                <div class="modal__list"><a href="tasks.html">Задания</a></div>
+                            </div>
+                            <div class="modal-menu__icon-list">
+                                <div class="modal__icon">
+                                    <ion-icon name="people"></ion-icon>
+                                </div>
+                                <div class="modal__list">
+                                    <a href="#">Рейтинг студента</a>
+                                </div>
+                            </div>
+                            <div class="modal-menu__icon-list">
+                                <div class="modal__icon">
+                                    <ion-icon name="notifications"></ion-icon>
+                                </div>
+                                <div class="modal__list"><a href="notifications.html">Уведомление</a></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </header>
+        <section class="disciple">
+            <div class="container">
+                <div class="background">
+                    <div class="blogTeacher">
+                        <a href="#" class="disciple">Дисциплины</a>
+                        <span>/</span>
+                        <a href="#" class="disciple">2023-2024-Осенний семестр</a>
+                        <span>/</span>
+                        <span>Керимбай уулу Максат</span>
+                    </div>
+                    <section class="preveiw">
+                        <button class="btn-journal disciple-btn" data-category="btn-journal">Журнал</button>
+                        <button class="btn-statement disciple-btn" data-category="btn-statement">Ведомость</button>
+                        <button class="btn-tmc disciple-btn" data-category="btn-tmc">Умк</button>
+                        <button class="btn-exercise disciple-btn" data-category="btn-exercise">Задание</button>
+                        <button class="btn-loadInformation disciple-btn" data-category="btn-loadInformation">Информация
+                            о нагрузках</button>
+                        <button class="btn-theme disciple-btn" data-category="btn-theme">Темы</button>
+                        <button class="btn-classes disciple-btn" data-category="btn-classes">Занятия</button>
+                    </section>
+                    <section class="window">
+                        <section class="journal" data-category="btn-journal">
+                            <div class="journal-btn-group">
+                                <button class="journal-practic journal-pad__our">Практика</button>
+                                <button class="journal-lecture journal-pad__our">Лекция</button>
+                            </div>
+                            <table class="journal-table">
+                                <thead>
+                                    <th class="journal-fullName">Фио</th>
+                                    <th class="journal-date">
+                                        <div class="journal-date__header">04.09.2023</div>
+                                    </th>
+                                    <th class="journal-date">
+                                        <div class="journal-date__header">04.09.2023</div>
+                                    </th>
+                                    <th class="journal-date">
+                                        <div class="journal-date__header">04.09.2023</div>
+                                    </th>
+                                    <th class="journal-date">
+                                        <div class="journal-date__header">04.09.2023</div>
+                                    </th>
+                                    <th class="journal-date">
+                                        <div class="journal-date__header">04.09.2023</div>
+                                    </th>
+                                    <th class="journal-date">
+                                        <div class="journal-date__header">04.09.2023</div>
+                                    </th>
+                                    <th class="journal-date">
+                                        <div class="journal-date__header">04.09.2023</div>
+                                    </th>
+                                    <th class="journal-date">
+                                        <div class="journal-date__header">04.09.2023</div>
+                                    </th>
+                                    <th class="journal-date">
+                                        <div class="journal-date__header">04.09.2023</div>
+                                    </th>
+                                    <th class="journal-date">
+                                        <div class="journal-date__header">04.09.2023</div>
+                                    </th>
+                                    <th class="journal-date">
+                                        <div class="journal-date__header">04.09.2023</div>
+                                    </th>
+                                    <th class="journal-date">
+                                        <div class="journal-date__header">04.09.2023</div>
+                                    </th>
+                                    <th class="journal-date">
+                                        <div class="journal-date__header">04.09.2023</div>
+                                    </th>
+                                    <th class="journal-date">
+                                        <div class="journal-date__header">04.09.2023</div>
+                                    </th>
+                                    <th class="journal-date">
+                                        <div class="journal-date__header">04.09.2023</div>
+                                    </th>
+                                    <th><button class="journal-create__date">+</button></th>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>1. Арсланова А.А.</td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td>4</td>
+                                        <td>5</td>
+                                        <td></td>
+                                    </tr>
+                                    <tr>
+                                        <td>1. Арсланова А.А.</td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td>4</td>
+                                        <td>5</td>
+                                        <td></td>
+                                    </tr>
+                                    <tr>
+                                        <td>1. Арсланова А.А.</td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td>4</td>
+                                        <td>5</td>
+                                        <td></td>
+                                    </tr>
+                                    <tr>
+                                        <td>1. Арсланова А.А.</td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td>4</td>
+                                        <td>5</td>
+                                        <td></td>
+                                    </tr>
+                                    <tr>
+                                        <td>1. Арсланова А.А.</td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td>4</td>
+                                        <td>5</td>
+                                        <td></td>
+                                    </tr>
+                                    <tr>
+                                        <td>1. Арсланова А.А.</td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td>4</td>
+                                        <td>5</td>
+                                        <td></td>
+                                    </tr>
+                                    <tr>
+                                        <td>1. Арсланова А.А.</td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td>4</td>
+                                        <td>5</td>
+                                        <td></td>
+                                    </tr>
+                                    <tr>
+                                        <td>1. Арсланова А.А.</td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td>4</td>
+                                        <td>5</td>
+                                        <td></td>
+                                    </tr>
+                                    <tr>
+                                        <td>1. Арсланова А.А.</td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td>4</td>
+                                        <td>5</td>
+                                        <td></td>
+                                    </tr>
+                                    <tr>
+                                        <td>1. Арсланова А.А.</td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td>4</td>
+                                        <td>5</td>
+                                        <td></td>
+                                    </tr>
+                                    <tr>
+                                        <td>1. Арсланова А.А.</td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td>4</td>
+                                        <td>5</td>
+                                        <td></td>
+                                    </tr>
+                                    <tr>
+                                        <td>1. Арсланова А.А.</td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td>4</td>
+                                        <td>5</td>
+                                        <td></td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </section>
+                        <section class="statement hidden" data-category="btn-statement">
+                            <table class="statement">
+                                <thead>
+                                    <th>#</th>
+                                    <th>Фио</th>
+                                    <th>Тест 1</th>
+                                    <th>Срс 1</th>
+                                    <th>Тест 2</th>
+                                    <th>Срс 2</th>
+                                    <th>Доп. балл</th>
+                                    <th>Общий балл</th>
+                                    <th>Оценка</th>
+                                    <th class="statement-edit">Редактирование</th>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>1</td>
+                                        <td>Арсланова Анжелика Арсланова</td>
+                                        <td>30</td>
+                                        <td>40</td>
+                                        <td>30</td>
+                                        <td>45</td>
+                                        <td>10</td>
+                                        <td>82.5</td>
+                                        <td>отл.</td>
+                                        <td><a href="#" class="statement-delete">Удалить</a></td>
+                                    </tr>
+                                    <tr>
+                                        <td>1</td>
+                                        <td>Арсланова Анжелика Арсланова</td>
+                                        <td>30</td>
+                                        <td>40</td>
+                                        <td>30</td>
+                                        <td>45</td>
+                                        <td>10</td>
+                                        <td>82.5</td>
+                                        <td>отл.</td>
+                                        <td><a href="#" class="statement-delete">Удалить</a></td>
+                                    </tr>
+                                    <tr>
+                                        <td>1</td>
+                                        <td>Арсланова Анжелика Арсланова</td>
+                                        <td>30</td>
+                                        <td>40</td>
+                                        <td>30</td>
+                                        <td>45</td>
+                                        <td>10</td>
+                                        <td>82.5</td>
+                                        <td>отл.</td>
+                                        <td><a href="#" class="statement-delete">Удалить</a></td>
+                                    </tr>
+                                    <tr>
+                                        <td>1</td>
+                                        <td>Арсланова Анжелика Арсланова</td>
+                                        <td>30</td>
+                                        <td>40</td>
+                                        <td>30</td>
+                                        <td>45</td>
+                                        <td>10</td>
+                                        <td>82.5</td>
+                                        <td>отл.</td>
+                                        <td><a href="#" class="statement-delete">Удалить</a></td>
+                                    </tr>
+                                    <tr>
+                                        <td>1</td>
+                                        <td>Арсланова Анжелика Арсланова</td>
+                                        <td>30</td>
+                                        <td>40</td>
+                                        <td>30</td>
+                                        <td>45</td>
+                                        <td>10</td>
+                                        <td>82.5</td>
+                                        <td>отл.</td>
+                                        <td><a href="#" class="statement-delete">Удалить</a></td>
+                                    </tr>
+                                    <tr>
+                                        <td>1</td>
+                                        <td>Арсланова Анжелика Арсланова</td>
+                                        <td>30</td>
+                                        <td>40</td>
+                                        <td>30</td>
+                                        <td>45</td>
+                                        <td>10</td>
+                                        <td>82.5</td>
+                                        <td>отл.</td>
+                                        <td><a href="#" class="statement-delete">Удалить</a></td>
+                                    </tr>
+                                    <tr>
+                                        <td>1</td>
+                                        <td>Арсланова Анжелика Арсланова</td>
+                                        <td>30</td>
+                                        <td>40</td>
+                                        <td>30</td>
+                                        <td>45</td>
+                                        <td>10</td>
+                                        <td>82.5</td>
+                                        <td>отл.</td>
+                                        <td><a href="#" class="statement-delete">Удалить</a></td>
+                                    </tr>
+                                    <tr>
+                                        <td>1</td>
+                                        <td>Арсланова Анжелика Арсланова</td>
+                                        <td>30</td>
+                                        <td>40</td>
+                                        <td>30</td>
+                                        <td>45</td>
+                                        <td>10</td>
+                                        <td>82.5</td>
+                                        <td>отл.</td>
+                                        <td><a href="#" class="statement-delete">Удалить</a></td>
+                                    </tr>
+                                    <tr>
+                                        <td>1</td>
+                                        <td>Арсланова Анжелика Арсланова</td>
+                                        <td>30</td>
+                                        <td>40</td>
+                                        <td>30</td>
+                                        <td>45</td>
+                                        <td>10</td>
+                                        <td>82.5</td>
+                                        <td>отл.</td>
+                                        <td><a href="#" class="statement-delete">Удалить</a></td>
+                                    </tr>
+                                    <tr>
+                                        <td>1</td>
+                                        <td>Арсланова Анжелика Арсланова</td>
+                                        <td>30</td>
+                                        <td>40</td>
+                                        <td>30</td>
+                                        <td>45</td>
+                                        <td>10</td>
+                                        <td>82.5</td>
+                                        <td>отл.</td>
+                                        <td><a href="#" class="statement-delete">Удалить</a></td>
+                                    </tr>
+                                    <tr>
+                                        <td>1</td>
+                                        <td>Арсланова Анжелика Арсланова</td>
+                                        <td>30</td>
+                                        <td>40</td>
+                                        <td>30</td>
+                                        <td>45</td>
+                                        <td>10</td>
+                                        <td>82.5</td>
+                                        <td>отл.</td>
+                                        <td><a href="#" class="statement-delete">Удалить</a></td>
+                                    </tr>
+                                    <tr>
+                                        <td>1</td>
+                                        <td>Арсланова Анжелика Арсланова</td>
+                                        <td>30</td>
+                                        <td>40</td>
+                                        <td>30</td>
+                                        <td>45</td>
+                                        <td>10</td>
+                                        <td>82.5</td>
+                                        <td>отл.</td>
+                                        <td><a href="#" class="statement-delete">Удалить</a></td>
+                                    </tr>
+                                    <tr>
+                                        <td>1</td>
+                                        <td>Арсланова Анжелика Арсланова</td>
+                                        <td>30</td>
+                                        <td>40</td>
+                                        <td>30</td>
+                                        <td>45</td>
+                                        <td>10</td>
+                                        <td>82.5</td>
+                                        <td>отл.</td>
+                                        <td><a href="#" class="statement-delete">Удалить</a></td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </section>
+                        <section class="tmc hidden" data-category="btn-tmc">
+
+                        </section>
+                        <section class="exercise hidden" data-category="btn-exercise">
+                            <div class="exercise-btn">
+                                <button class="exercise-create">создать задание</button>
+                            </div>
+                            <table class="exercise-table">
+                                <thead>
+                                    <th>Название</th>
+                                    <th>Начиная с</th>
+                                    <th>Завершить к</th>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td></td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </section>
+                        <section class="loadInformation hidden" data-category="btn-loadInformation">
+                            <table class="loadInformation-table">
+                                <thead>
+                                    <th>Типы</th>
+                                    <th>Плановые часы</th>
+                                    <th>Часы</th>
+                                    <th>Преподаватель</th>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>Лекция</td>
+                                        <td>30</td>
+                                        <td>30</td>
+                                        <td>Керимбай уулу Максат</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Лабораторное занятие</td>
+                                        <td>30</td>
+                                        <td>30</td>
+                                        <td>Керимбай уулу Максат</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </section>
+                        <section class="theme hidden" data-category="btn-theme"></section>
+                        <section class="classes hidden" data-category="btn-classes"></section>
+                    </section>
+                </div>
+
+            </div>
+        </section>
+    </div>
+    <div class="empty">e</div>
+    <script src="../js/teachersPages.js"></script>
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg .com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+    <script src="../js/app.js"></script>
+</body>
+
+</html>
