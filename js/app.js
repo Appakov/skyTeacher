@@ -160,29 +160,108 @@ function updateOptionType(select) {
 //Функция добавления вопроса
 function addQuestion() {
     const questionColumn = document.getElementById('question-column');
-    const questionFlex = questionColumn.querySelector('.create__question-flex');
-    const newQuestion = questionFlex.cloneNode(true);
 
-    // Сгенерировать уникальный ID для нового вопроса
-    const newQuestionId = Date.now();
-    newQuestion.dataset.questionId = newQuestionId;
+    // Создаем новый блок вопроса
+    const newQuestion = document.createElement('div');
+    newQuestion.className = 'create__question-flex';
+    newQuestion.dataset.questionId = Date.now();
 
-    // Очистка полей и т.д.
-    const textareas = newQuestion.querySelectorAll('.create__textarea');
-    textareas.forEach(textarea => {
-        textarea.value = '';
-    });
+    // Создаем внутреннюю структуру нового вопроса
+    const newColumn = document.createElement('div');
+    newColumn.className = 'create__column';
 
-    const inputs = newQuestion.querySelectorAll('input[type="checkbox"], input[type="radio"]');
-    inputs.forEach(input => {
-        input.checked = false;
-        if (input.type === 'radio') {
-            input.name = 'radio_group_' + newQuestionId;  // Установить новое имя для группы радио
-        }
-    });
+    const newTypeSelect = document.createElement('div');
+    newTypeSelect.className = 'create__type-select';
 
+    const newTextarea = document.createElement('textarea');
+    newTextarea.className = 'create__textarea';
+    newTextarea.placeholder = 'Вопрос';
+
+    const newSelect = document.createElement('select');
+    newSelect.className = 'create__select-choise';
+    newSelect.onchange = function() { updateOptionType(newSelect); };
+
+    const optionRadio = document.createElement('option');
+    optionRadio.value = 'radio';
+    optionRadio.textContent = 'Один из списка';
+    newSelect.appendChild(optionRadio);
+
+    const optionCheckbox = document.createElement('option');
+    optionCheckbox.value = 'checkbox';
+    optionCheckbox.textContent = 'Выбрать несколько';
+    newSelect.appendChild(optionCheckbox);
+
+    newTypeSelect.appendChild(newTextarea);
+    newTypeSelect.appendChild(newSelect);
+    newColumn.appendChild(newTypeSelect);
+
+    const newOptionItemColumn = document.createElement('div');
+    newOptionItemColumn.className = 'option-item__column';
+    newColumn.appendChild(newOptionItemColumn);
+
+    newQuestion.appendChild(newColumn);
+
+    // Создаем кнопки функционала вопроса
+    const newTodoFunc = document.createElement('div');
+    newTodoFunc.className = 'create__todo-func';
+
+    const btnAddQuestion = document.createElement('button');
+    btnAddQuestion.className = 'create__todo-btn btn-add-question';
+    btnAddQuestion.title = 'Добавить вопрос';
+    btnAddQuestion.onclick = function() { addQuestion(); };
+    const imgAddQuestion = document.createElement('img');
+    imgAddQuestion.src = '../images/create-add-question.png';
+    imgAddQuestion.alt = '';
+    btnAddQuestion.appendChild(imgAddQuestion);
+    newTodoFunc.appendChild(btnAddQuestion);
+
+    const btnAddOption = document.createElement('button');
+    btnAddOption.className = 'create__todo-btn btn-add-option';
+    btnAddOption.title = 'Добавить вариант';
+    btnAddOption.onclick = function() { addOption(btnAddOption); };
+    const iconAddOption = document.createElement('ion-icon');
+    iconAddOption.name = 'add-circle';
+    iconAddOption.style.width = '40px';
+    iconAddOption.style.height = '40px';
+    btnAddOption.appendChild(iconAddOption);
+    newTodoFunc.appendChild(btnAddOption);
+
+    const btnCopy = document.createElement('button');
+    btnCopy.className = 'create__todo-btn btn-copy';
+    btnCopy.title = 'Создать копию';
+    btnCopy.onclick = function() { copyQuestion(btnCopy); };
+    const imgCopy = document.createElement('img');
+    imgCopy.src = '../images/create-save-question.png';
+    imgCopy.alt = '';
+    btnCopy.appendChild(imgCopy);
+    newTodoFunc.appendChild(btnCopy);
+
+    const btnAddImage = document.createElement('button');
+    btnAddImage.className = 'create__todo-btn btn-add-image';
+    btnAddImage.title = 'Добавить картинку';
+    btnAddImage.onclick = function() { addImageToQuestion(btnAddImage); };
+    const imgAddImage = document.createElement('img');
+    imgAddImage.src = '../images/create-add-image.png';
+    imgAddImage.alt = '';
+    btnAddImage.appendChild(imgAddImage);
+    newTodoFunc.appendChild(btnAddImage);
+
+    const btnDeleteQuestion = document.createElement('button');
+    btnDeleteQuestion.className = 'create__todo-btn btn-delete-question';
+    btnDeleteQuestion.title = 'Удалить вопрос';
+    btnDeleteQuestion.onclick = function() { deleteQuestion(btnDeleteQuestion); };
+    const imgDeleteQuestion = document.createElement('img');
+    imgDeleteQuestion.src = '../images/create-delete-question.png';
+    imgDeleteQuestion.alt = '';
+    btnDeleteQuestion.appendChild(imgDeleteQuestion);
+    newTodoFunc.appendChild(btnDeleteQuestion);
+
+    newQuestion.appendChild(newTodoFunc);
+
+    // Добавляем новый вопрос в конец questionColumn
     questionColumn.appendChild(newQuestion);
 }
+
 
 //Функция добавления варианта
 function addOption(button) {
