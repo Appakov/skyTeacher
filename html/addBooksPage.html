@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 
 <head>
     <meta charset="UTF-8">
@@ -7,11 +7,13 @@
     <link rel="stylesheet" href="../css/style.css">
     <link rel="stylesheet" href="../css/core.css">
     <link rel="stylesheet" href="../css/normalize.css">
-    <title>Главная</title>
+    <link rel="stylesheet" href="../css/libraryTeacher.css">
+    <title>Добавление книги</title>
 </head>
 
 <body>
     <div class="wrapper">
+
         <header class="header">
             <div class="container">
                 <nav class="nav">
@@ -86,7 +88,7 @@
                                     <ion-icon name="book"></ion-icon>
                                 </div>
                                 <div class="modal__list">
-                                    <a href="libraryTeacher.html">Библиотека</a>
+                                    <a href="library.html">Библиотека</a>
                                 </div>
                             </div>
                             <div class="modal-menu__icon-list">
@@ -120,108 +122,47 @@
                 </div>
             </div>
         </header>
-        <section class="today">
+
+        <div class="addBook">
             <div class="container">
-                <div class="today-inner background">
-                    <section class="semestrs">
-                        <div class="semestrs-autumn">
-                            <a href="autumnSemestr.html" class="semestrs-autumn__link">Осенний семестр</a>
-                            <div class="semestrs-date">
-                                <a href="#" class="semestrs__link">2023-2024</a>
-                                <img src="../images/semestr-autumn.svg" alt="autumnIcon">
+                <div class="background">
+                    <div class="addBook__wrapper">
+                        <div class="addBook__column">
+                            <div class="addBook__flex">
+                                <input type="text" class="addBook__input" placeholder="Название">
+                                <input type="text" class="addBook__input" placeholder="Автор">
+                                <select name="" id="" class="addBook__select">
+                                    <option value="">Категория</option>
+                                    <option value="bilogy">Биология</option>
+                                    <option value="geograph">География</option>
+                                    <option value="geometry">Геометрия</option>
+                                    <option value="history">История</option>
+                                    <option value="informatica">Информатика</option>
+                                    <option value="informatica">Транспорт</option>
+                                    <option value="informatica">Кыргызский язык</option>
+                                    <option value="informatica">Кыргызская литература</option>
+                                    <option value="informatica">Математика</option>
+                                    <option value="informatica">Музыка</option>
+                                    <option value="informatica">Педагогика</option>
+                                    <option value="informatica">Психология</option>
+                                    <option value="informatica">Русский язык</option>
+                                    <option value="informatica">Русская литература</option>
+                                    <option value="informatica">Религия</option>
+                                    <option value="informatica">Социология</option>
+                                    <option value="informatica">Физика</option>
+                                </select>
+                                <input type="text" class="addBook__input" placeholder="Описание">
                             </div>
-                        </div>
-                        <div class="semestrs-spring">
-                            <a href="#" class="semestrs-spring__link">Весенний семестр</a>
-                            <div class="semestrs-date">
-                                <a href="#" class="semestrs__link">2023-2023</a>
-                                <img src="../images/semestr-spring.svg" alt="springIcon">
+                            <div class="addBook__btn-wrap">
+                                <button class="addBook__btn-save"><img src="../images/addBook-save.png" alt=""></button>
+                                <button class="addBook__btn-public">Опубликовать</button>
                             </div>
-                        </div>
-                    </section>
-                    <div class="semestrs-time-parent">
-                        <a href="autumnSemestr.html" class="semestrs-time">Расписание</a>
-                    </div>
-                    <div class="timetable-flex">
-                        <div class="timetable">
-                            <div class="timetable-date">
-                                <h3 class="timetable-date__title">Сегодня: 19.03.2024</h3>
-                            </div>
-                            <table class="raspisanie">
-                                <thead>
-                                    <th>Время занятийй</th>
-                                    <th>Группа</th>
-                                    <th>Дисциплина</th>
-                                    <th>Аудитория</th>
-                                    <th>Отметка</th>
-                                </thead>
-                                <tbody>
-                                    <tr>
-                                        <td>08:30</td>
-                                        <td>ИСТ-20</td>
-                                        <td>Информатика</td>
-                                        <td>Учебный корпус №3а. ТЭФ/204б</td>
-                                        <td>Информатика</td>
-                                    </tr>
-                                    <tr>
-                                        <td>08:30</td>
-                                        <td>ИСТ-20</td>
-                                        <td>Информатика</td>
-                                        <td>Учебный корпус №3а. ТЭФ/204б</td>
-                                        <td>Информатика</td>
-                                    </tr>
-                                    <tr>
-                                        <td>08:30</td>
-                                        <td>ИСТ-20</td>
-                                        <td>Информатика</td>
-                                        <td>Учебный корпус №3а. ТЭФ/204б</td>
-                                        <td>Информатика</td>
-                                    </tr>
-                                </tbody>
-                            </table>                       
-                        </div>
-                        <div class="timetable">
-                            <div class="timetable-date">
-                                <h3 class="timetable-date__title">Сегодня: 19.03.2024</h3>
-                            </div>
-                            <table class="raspisanie">
-                                <thead>
-                                    <th>Время занятийй</th>
-                                    <th>Группа</th>
-                                    <th>Дисциплина</th>
-                                    <th>Аудитория</th>
-                                    <th>Отметка</th>
-                                </thead>
-                                <tbody>
-                                    <tr>
-                                        <td>08:30</td>
-                                        <td>ИСТ-20</td>
-                                        <td>Информатика</td>
-                                        <td>Учебный корпус №3а. ТЭФ/204б</td>
-                                        <td>Информатика</td>
-                                    </tr>
-                                    <tr>
-                                        <td>08:30</td>
-                                        <td>ИСТ-20</td>
-                                        <td>Информатика</td>
-                                        <td>Учебный корпус №3а. ТЭФ/204б</td>
-                                        <td>Информатика</td>
-                                    </tr>
-                                    <tr>
-                                        <td>08:30</td>
-                                        <td>ИСТ-20</td>
-                                        <td>Информатика</td>
-                                        <td>Учебный корпус №3а. ТЭФ/204б</td>
-                                        <td>Информатика</td>
-                                    </tr>
-                                </tbody>
-                            </table>                       
                         </div>
                     </div>
                 </div>
             </div>
-        </section>
-        
+        </div>
+
     </div>
     <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
     <script nomodule src="https://unpkg .com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>

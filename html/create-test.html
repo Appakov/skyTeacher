@@ -1,17 +1,20 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../css/style.css">
-    <link rel="stylesheet" href="../css/core.css">
     <link rel="stylesheet" href="../css/normalize.css">
-    <title>Главная</title>
+    <link rel="stylesheet" href="../css/core.css">
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/create-test.css">
+
+    <title>Создание теста</title>
 </head>
 
 <body>
     <div class="wrapper">
+
         <header class="header">
             <div class="container">
                 <nav class="nav">
@@ -120,108 +123,78 @@
                 </div>
             </div>
         </header>
-        <section class="today">
+
+        <div class="create">
             <div class="container">
-                <div class="today-inner background">
-                    <section class="semestrs">
-                        <div class="semestrs-autumn">
-                            <a href="autumnSemestr.html" class="semestrs-autumn__link">Осенний семестр</a>
-                            <div class="semestrs-date">
-                                <a href="#" class="semestrs__link">2023-2024</a>
-                                <img src="../images/semestr-autumn.svg" alt="autumnIcon">
-                            </div>
-                        </div>
-                        <div class="semestrs-spring">
-                            <a href="#" class="semestrs-spring__link">Весенний семестр</a>
-                            <div class="semestrs-date">
-                                <a href="#" class="semestrs__link">2023-2023</a>
-                                <img src="../images/semestr-spring.svg" alt="springIcon">
-                            </div>
-                        </div>
-                    </section>
-                    <div class="semestrs-time-parent">
-                        <a href="autumnSemestr.html" class="semestrs-time">Расписание</a>
-                    </div>
-                    <div class="timetable-flex">
-                        <div class="timetable">
-                            <div class="timetable-date">
-                                <h3 class="timetable-date__title">Сегодня: 19.03.2024</h3>
-                            </div>
-                            <table class="raspisanie">
-                                <thead>
-                                    <th>Время занятийй</th>
-                                    <th>Группа</th>
-                                    <th>Дисциплина</th>
-                                    <th>Аудитория</th>
-                                    <th>Отметка</th>
-                                </thead>
-                                <tbody>
-                                    <tr>
-                                        <td>08:30</td>
-                                        <td>ИСТ-20</td>
-                                        <td>Информатика</td>
-                                        <td>Учебный корпус №3а. ТЭФ/204б</td>
-                                        <td>Информатика</td>
-                                    </tr>
-                                    <tr>
-                                        <td>08:30</td>
-                                        <td>ИСТ-20</td>
-                                        <td>Информатика</td>
-                                        <td>Учебный корпус №3а. ТЭФ/204б</td>
-                                        <td>Информатика</td>
-                                    </tr>
-                                    <tr>
-                                        <td>08:30</td>
-                                        <td>ИСТ-20</td>
-                                        <td>Информатика</td>
-                                        <td>Учебный корпус №3а. ТЭФ/204б</td>
-                                        <td>Информатика</td>
-                                    </tr>
-                                </tbody>
-                            </table>                       
-                        </div>
-                        <div class="timetable">
-                            <div class="timetable-date">
-                                <h3 class="timetable-date__title">Сегодня: 19.03.2024</h3>
-                            </div>
-                            <table class="raspisanie">
-                                <thead>
-                                    <th>Время занятийй</th>
-                                    <th>Группа</th>
-                                    <th>Дисциплина</th>
-                                    <th>Аудитория</th>
-                                    <th>Отметка</th>
-                                </thead>
-                                <tbody>
-                                    <tr>
-                                        <td>08:30</td>
-                                        <td>ИСТ-20</td>
-                                        <td>Информатика</td>
-                                        <td>Учебный корпус №3а. ТЭФ/204б</td>
-                                        <td>Информатика</td>
-                                    </tr>
-                                    <tr>
-                                        <td>08:30</td>
-                                        <td>ИСТ-20</td>
-                                        <td>Информатика</td>
-                                        <td>Учебный корпус №3а. ТЭФ/204б</td>
-                                        <td>Информатика</td>
-                                    </tr>
-                                    <tr>
-                                        <td>08:30</td>
-                                        <td>ИСТ-20</td>
-                                        <td>Информатика</td>
-                                        <td>Учебный корпус №3а. ТЭФ/204б</td>
-                                        <td>Информатика</td>
-                                    </tr>
-                                </tbody>
-                            </table>                       
+                <div class="background">
+                    <div class="create__type-wrap">
+                        <h3 class="create__who">
+                            Автор: Жоробекова Бактыгул Советбековна
+                        </h3>
+                        <hr class="create__separator">
+                        <div class="create__flex">
+                            <select class="create__select" name="" id="create__select-type">
+                                <option value="">Тип теста</option>
+                            </select>
+                            <input type="text" class="create__select" placeholder="Название">
+                            <input type="text" class="create__select" placeholder="Описание">
                         </div>
                     </div>
+                    <div class="create__question-column" id="question-column">
+                        <div class="create__question-flex">
+                            <div class="create__column">
+                                <div class="create__type-select">
+                                    <textarea name="" id="" class="create__textarea" placeholder="Вопрос"></textarea>
+                                    <select name="" id="" class="create__select-choise"
+                                        onchange="updateOptionType(this)">
+                                        <option value="default">Выберите</option>
+                                        <option value="radio">Один из списка</option>
+                                        <option value="checkbox">Выбрать несколько</option>
+                                    </select>
+                                </div>
+                                <div class="create__image-container"></div>
+                                <div class="option-item__column">
+                                    <div class="option-item">
+                                        <input type="checkbox" class="option-checkbox">
+                                        <div class="content-editable" contenteditable="true"></div>
+                                        <input type="file" class="file-input" accept="image/*" style="display:none;">
+                                        <button class="add-image-btn" onclick="addImage(this)"><img src="../images/image-variable.png" alt=""></button>
+                                        <button class="delete-option-btn" onclick="deleteOption(this)"><img src="../images/delete-variable.png" alt=""></button>
+                                    </div>
+                                    
+                                </div>
+                            </div>
+                            <div class="create__todo-func">
+                                <button class="create__todo-btn btn-add-question" title="Добавить вопрос"
+                                    onclick="addQuestion()">
+                                    <img src="../images/create-add-question.png" alt="">
+                                </button>
+                                <button class="create__todo-btn btn-add-option" title="Добавить вариант"
+                                    onclick="addOption(this)">
+                                    <ion-icon name="add-circle" style="width: 40px; height: 40px;"></ion-icon>
+                                </button>
+                                <button class="create__todo-btn btn-copy" title="Создать копию"
+                                    onclick="copyQuestion(this)">
+                                    <img src="../images/create-save-question.png" alt="">
+                                </button>
+                                <button class="create__todo-btn btn-add-image" title="Добавить картинку"
+                                    onclick="addImageToQuestion(this)">
+                                    <img src="../images/create-add-image.png" alt="">
+                                </button>
+                                <button class="create__todo-btn btn-delete-question" title="Удалить вопрос"
+                                    onclick="deleteQuestion(this)">
+                                    <img src="../images/create-delete-question.png" alt="">
+                                </button>
+                                <button class="create__todo-btn btn-delete-img" title="Удалить картинку у вопроса"
+                                    onclick="deleteImageFromQuestion(this)"><ion-icon name="trash-outline"
+                                        style="width: 40px; height: 40px;"></ion-icon></button>
+                            </div>
+                        </div>
+                    </div>
+
                 </div>
             </div>
-        </section>
-        
+        </div>
     </div>
     <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
     <script nomodule src="https://unpkg .com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>

@@ -1,84 +1,330 @@
 .library {
-    width: 100%;
-    height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
+    height: 100vh;
 
-    // .library__inner
+    &__page-block {
+        margin-top: 20px;
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 40px;
 
-    &__inner {
+    }
 
-        height: 90vh;
-        box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.25);
-        background: rgba(255, 249, 249, 0.95);
+    &__link-wrap {
+        a {
+            font-weight: 400;
+            font-size: 17px;
+            line-height: 1.25;
+            text-align: center;
+            color: #000;
+            border-radius: 3px;
+            width: 186px;
+            height: 41px;
+            box-shadow: inset 0 4px 4px 0 rgba(0, 0, 0, 0.25);
+            background: #fff;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+    }
+
+    &__create-btn {
+        display: flex;
+        justify-content: center;
+        align-items: center;
         border-radius: 3px;
+        width: 186px;
+        height: 41px;
+        box-shadow: inset 0 4px 4px 0 rgba(0, 0, 0, 0.25);
+        background: #fff;
+        color: #000;
+    }
 
+    .background {
+        border-radius: 3px;
+    }
+
+    // .library__flex
+
+    &__flex {
+        display: flex;
+        gap: 30px;
+    }
+
+    // .library__left
+
+    &__left {
+        width: 25%;
+        margin: 0 auto;
+    }
+
+    // .library__select
+
+    &__select {
+        margin-top: 20px;
+        margin-bottom: 5px;
+        margin-left: 52px;
+        font-weight: 400;
+        font-size: 20px;
+        line-height: 1.25;
+    }
+
+    // .library__category-wrap
+
+    &__category-wrap {
+        width: 85%;
+        margin: 0 auto;
+        padding: 0 9px;
+        border-radius: 3px;
+        box-shadow: inset 0 4px 4px 0 rgba(0, 0, 0, 0.25);
+        background: rgba(255, 255, 255, 0.69);
+        height: 95vh;
+        overflow-y: auto;
+
+    }
+
+    // .library__category
+
+    &__category {
+        margin-top: 14px;
+
+    }
+
+    // .library__category-direction
+
+    &__category-direction {
+        padding-bottom: 5px;
+        padding-top: 8px;
+    }
+
+    // .library__category-separator
+
+    &__category-separator {
+        border-bottom: 1px solid #000;
+    }
+
+    // .library__right
+
+    &__right {
+        margin-top: 20px;
+        width: 75%;
+        height: 95vh;
+        margin-right: 20px;
+        border: 1px solid #000;
+        border-radius: 3px;
+        overflow-y: auto;
+    }
+
+    // .library__input-wrap
+
+    &__input-wrap {
+        margin-top: 10px;
+        margin-right: 7px;
+        display: flex;
+        justify-content: end;
+        align-items: center;
+        gap: 6px;
+        margin-bottom: 9px;
+    }
+
+    // .library__input
+
+    &__input {
+        width: 490px;
+        height: 35px;
+        border-radius: 3px;
+    }
+
+    // .library__search-btn
+
+    &__search-btn {
+        border: 1px solid #000;
+        border-radius: 3px;
+        width: 140px;
+        height: 35px;
+        box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.25);
+        background: #ceeb7c;
+        font-weight: 600;
+        font-size: 17px;
+        line-height: 1.25;
+    }
+
+    &__book-parent {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 20px;
+    }
+
+    // .library__book-flex
+
+    &__book-flex {
+        display: flex;
+        align-items: center;
+        gap: 20px;
+        width: 98%;
+        margin: 0 auto;
+        border: 1px solid #000;
+        border-radius: 3px;
+        min-height: 260px;
+        max-height: 280px;
+    }
+
+    // .library__book-wrap
+
+    &__book-wrap {
+        width: 200px;
+        height: 260px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-right: 1px solid #000;
+        padding: 0 24px;
+
+        img {
+            width: 153px;
+            height: 213px;
+            object-fit: cover;
+        }
+    }
+
+    // .library__content
+
+    &__content {
+        display: flex;
+        flex-direction: column;
+    }
+
+    // .library__category-block
+
+    &__category-block {}
+
+    // .library__category-name
+
+    &__category-name {
+        font-weight: 600;
+        font-size: 17px;
+        line-height: 1.92308;
+        color: #848080;
+        display: flex;
+        justify-content: end;
+        margin-right: 18px;
+    }
+
+    // .library__book-name
+
+    &__book-name {
+        font-weight: 700;
+        font-size: 32px;
+        line-height: 0.78125;
+        color: #000;
+        margin-bottom: 18px;
+    }
+
+    // .library__book-author
+
+    &__book-author {
+        font-weight: 400;
+        font-size: 17px;
+        line-height: 1.78571;
+        color: #702929;
+        margin-bottom: 19px;
+    }
+
+    // .library__book-description
+
+    &__book-description {
+        margin-bottom: 5px;
+        font-weight: 400;
+        font-size: 17px;
+        line-height: 1.33333;
+        color: #000;
+
+    }
+
+    // .library__teacher-wrap
+
+    &__teacher-wrap {
+        display: flex;
+        justify-content: end;
+        margin-right: 18px;
+    }
+
+    // .library__teacher-name
+
+    &__teacher-name {
+        font-weight: 600;
+        font-size: 17px;
+        line-height: 1.92308;
+        color: #848080;
+    }
+}
+
+.addBook {
+    margin-top: 27px;
+    &__wrapper {
+        width: 95%;
+        margin: 27px auto 0;
+        border: 1px solid #000;
+        box-shadow: inset 0 4px 4px 0 rgba(0, 0, 0, 0.25);
+        background: rgba(250, 235, 252, 0.69);
+    }
+
+    // .addBook__column
+
+    &__column {
+        margin-top: 20px;
+        display: flex;
+        flex-direction: column;
     }
 
     &__flex {
         display: flex;
         justify-content: space-between;
+        margin: 0 52px 140px;
     }
 
-    // .library__block-category
+    // .addBook__input
 
-    &__block-category {
-        border-radius: 3px;
-        width: 284px;
-        height: 609px;
-        box-shadow: inset 0 4px 4px 0 rgba(0, 0, 0, 0.25);
-        background: rgba(250, 235, 252, 0.69);
-        margin: 30px 76px 48px 48px;
+    &__input {
+        width: 245px;
+        height: 30px;
+        padding-left: 40px;
     }
 
-    // .library__link-book
+    // .addBook__select
 
-    &__link-book {}
+    &__select {
+        width: 245px;
+    }
 
-    // .library__block-link
+    // .addBook__btn-wrap
 
-    &__block-link {
-        margin-top: 25px;
-        margin-bottom: 19px;
+    &__btn-wrap {
         display: flex;
-        justify-content: end;
-        margin-right: 80px;
+        justify-content: space-between;
+        margin: 0 170px 27px 63px;
+        align-items: center;
 
     }
 
-    // .library__add-link
-
-    &__add-link {
-        position: relative;
-        padding: 11px 11px 11px 45px;
-        box-shadow: inset 0 4px 4px 0 rgba(0, 0, 0, 0.25);
-        background: rgba(250, 235, 252, 0.69);
-        color: #000;
-        border-radius: 3px;
-
-        &::before {
-            position: absolute;
-            content: '';
-            background-image: url(../images/library-add.svg);
-            width: 30px;
-            height: 30px;
-            top: 6px;
-            bottom: 5px;
-            left: 7px;
-            right: 38px;
-        }
+    &__btn-save {
+        border: none;
+        background-color: transparent;
+        cursor: pointer;
     }
 
-    // .library__block-books
-
-    &__block-books {
-        width: 775px;
-        height: 553px;
-        border-radius: 3px;
-        box-shadow: inset 0 4px 4px 0 rgba(0, 0, 0, 0.25);
-        background: rgba(250, 235, 252, 0.69);
-        margin-right: 48px;
-        // margin-bottom: 48px;
+    // .addBook__btn-public
+    &__btn-public {
+        border: 1px solid rgba(121, 196, 138, 0.83);
+        border-radius: 5px;
+        width: 172px;
+        height: 42px;
+        background: rgba(55, 202, 149, 0.7);
+        font-weight: 400;
+        font-size: 17px;
+        line-height: 1.25;
+        cursor: pointer;
     }
 }

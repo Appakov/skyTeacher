@@ -1,0 +1,189 @@
+.create {
+  margin-top: 30px;
+}
+.create .background {
+  padding: 20px 0 0;
+  overflow-y: auto;
+}
+.create__type-wrap {
+  width: 95%;
+  margin: 0 auto;
+  background: rgba(253, 240, 253, 0.95);
+  border: 1px solid #000;
+  border-radius: 3px;
+  margin-bottom: 34px;
+}
+.create__who {
+  margin-top: 17px;
+  margin-left: 23px;
+  font-weight: 700;
+  font-size: 17px;
+  line-height: 1.25;
+  margin-bottom: 2px;
+}
+.create__separator {
+  width: 98%;
+  margin: 0 auto;
+  margin-bottom: 23px;
+}
+.create__flex {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin: 0 40px 20px;
+}
+.create__select {
+  width: 300px;
+  height: 40px;
+  padding-left: 23px;
+  border-radius: 5px;
+  -webkit-box-shadow: inset 0 4px 4px 0 rgba(0, 0, 0, 0.25);
+          box-shadow: inset 0 4px 4px 0 rgba(0, 0, 0, 0.25);
+  background: #fff5f5;
+  border: none;
+  outline: none;
+}
+.create__question-column {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 20px;
+  width: 95%;
+  margin: 0 auto;
+}
+.create__question-flex {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  border-radius: 3px;
+  -webkit-box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.25);
+          box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.25);
+  background-color: #fff;
+  overflow-y: auto;
+}
+.create__type-select {
+  margin: 20px 20px 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 20px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.create__select-choise {
+  width: 300px;
+  height: 40px;
+  padding-left: 20px;
+  border-radius: 3px;
+}
+.create__variant-column {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+.create__textarea {
+  padding-top: 10px;
+  width: 600px;
+  height: 40px;
+  border-radius: 3px;
+  background: rgba(238, 234, 234, 0.95);
+  resize: none;
+  padding-left: 20px;
+  outline: none;
+}
+.create__todo-func {
+  padding: 30px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 45px;
+  -webkit-box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.25);
+          box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.25);
+  border-radius: 3px;
+}
+.create__todo-btn {
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+}
+.create__image-container {
+  margin-left: 20px;
+}
+.create__image-container img {
+  -o-object-position: top center;
+     object-position: top center;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.option-item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 10px;
+  margin: 20px 0 0 20px;
+}
+.option-item__column {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 20px;
+}
+.option-item .option-checkbox {
+  margin: 0;
+}
+.option-item .content-editable {
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+  padding: 5px;
+  border: none;
+  outline: none;
+  border-bottom: 1px solid #000;
+  min-height: 40px;
+  width: 500px;
+  overflow: auto;
+}
+.option-item .add-image-btn, .option-item .delete-option-btn {
+  cursor: pointer;
+  border: none;
+  background: transparent;
+}
+.option__column-flexbox {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
