@@ -95,6 +95,9 @@
     // .library__category-direction
 
     &__category-direction {
+        cursor: pointer;
+        border: none;
+        background-color: transparent;
         padding-bottom: 5px;
         padding-top: 8px;
     }

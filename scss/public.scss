@@ -1,0 +1,120 @@
+.public {
+    margin-top: 30px;
+    // .public__pad
+
+    &__pad {
+        padding: 20px;
+        box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.25);
+        background: rgba(255, 253, 253, 0.95);
+        border-radius: 3px;
+    }
+
+    // .public__inner
+
+    &__inner {
+        padding: 20px 30px;
+        box-shadow: inset 0 4px 4px 0 rgba(0, 0, 0, 0.25);
+        background: rgba(250, 235, 252, 0.69);
+    }
+
+    // .public__flex
+
+    &__flex {
+        display: flex;
+        align-items: center;
+        gap: 30px;
+    }
+
+    // .public__images-block
+
+    &__images-block {
+        box-shadow: inset 0 4px 4px 0 rgba(0, 0, 0, 0.25);
+        background: #fff;
+        width: 263px;
+        height: 240px;
+        padding: 15px 14px;
+
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+    }
+
+    // .public__file-link
+
+    &__file-link {}
+
+    // .public__column
+
+    &__column {
+        display: flex;
+        flex-direction: column;
+    }
+
+    // .public__input
+
+    &__input {
+        border: none;
+        outline: none;
+        border-bottom: 1px solid #000;
+        background: transparent;
+        padding-bottom: 5px;
+        padding-left: 11px;
+        font-weight: 400;
+        font-size: 15px;
+        line-height: 1.66667;
+        color: #9e9797;
+        margin-bottom: 5px;
+        width: 700px;
+        height: 35px;
+    }
+
+    // .public__select
+
+    &__select {
+        color: #9e9797;
+        padding-left: 6px;
+        height: 35px;
+        border: none;
+        outline: none;
+        background-color: transparent;
+        width: 340px;
+        padding-bottom: 5px;
+        margin-bottom: 5px;
+        border-bottom: 1px solid #000;
+    }
+
+    // .public__button-wrap
+
+    &__button-wrap {
+        margin-top: 30px;
+        display: flex;
+        align-items: center;
+        justify-content: end;
+        gap: 100px;
+    }
+
+    // .public__file-btn
+
+    &__file-btn {
+        border: none;
+        background-color: transparent;
+        cursor: pointer;
+    }
+
+    // .public__public-btn
+
+    &__public-btn {
+        box-shadow: inset 0 4px 4px 0 rgba(0, 0, 0, 0.25);
+        background: rgba(234, 251, 218, 0.7);
+        border: 1px solid rgba(234, 251, 218, 0.83);
+        border-radius: 3px;
+        padding: 7px 15px;
+        font-weight: 700;
+        font-size: 16px;
+        line-height: 1.5625;
+        color: #000;
+        cursor: pointer;
+    }
+}

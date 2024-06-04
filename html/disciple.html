@@ -23,29 +23,29 @@
                     </div>
                     <ul class="menu">
                         <li class="menu__list">
-                            <a href="home.html" class="menu__link"><ion-icon name="home"></ion-icon></a>
+                            <a href="home.html" class="menu__link" title="Главная"><ion-icon name="home"></ion-icon></a>
                         </li>
                         <li class="menu__list">
-                            <a href="testing.html" class="menu__link"><ion-icon name="receipt"></ion-icon></a>
+                            <a href="testing.html" class="menu__link" title="Тестирование"><ion-icon
+                                    name="receipt"></ion-icon></a>
                         </li>
                         <li class="menu__list">
-                            <a href="library.html" class="menu__link"><ion-icon name="book"></ion-icon></a>
+                            <a href="libraryTeacher.html" class="menu__link" title="Библиотека"><ion-icon
+                                    name="book"></ion-icon></a>
                         </li>
                         <li class="menu__list">
-                            <a href="#" class="menu__link"><ion-icon name="search"></ion-icon></a>
+                            <a href="#" class="menu__link" title="Поиск"><ion-icon name="search"></ion-icon></a>
                         </li>
                         <li class="menu__list">
-                            <a href="courses.html" class="menu__link"><ion-icon name="create"></ion-icon></a>
+                            <a href="constructorTeacher.html" class="menu__link" title="Конструктор курсов"><ion-icon
+                                    name="create"></ion-icon></a>
                         </li>
                         <li class="menu__list">
-                            <a href="#" class="menu__link"><ion-icon name="chatbubble"></ion-icon></a>
+                            <a href="#" class="menu__link" title="Задания"><ion-icon name="chatbubble"></ion-icon></a>
                         </li>
                         <li class="menu__list">
-                            <a href="#" class="menu__link"><ion-icon name="people"></ion-icon></a>
-                        </li>
-                        <li class="menu__list">
-                            <a href="notifications.html" class="menu__link"><ion-icon
-                                    name="notifications"></ion-icon></a>
+                            <a href="portfolio.html" class="menu__link" title="Резюме"><ion-icon
+                                    name="people"></ion-icon></a>
                         </li>
                     </ul>
                     <div class="chatbot-darkmode">
@@ -87,35 +87,30 @@
                                     <ion-icon name="book"></ion-icon>
                                 </div>
                                 <div class="modal__list">
-                                    <a href="library.html">Библиотека</a>
+                                    <a href="libraryTeacher.html">Библиотека</a>
                                 </div>
                             </div>
                             <div class="modal-menu__icon-list">
                                 <div class="modal__icon">
                                     <ion-icon name="create"></ion-icon>
                                 </div>
-                                <div class="modal__list"><a href="courses.html">Курсы</a></div>
+                                <div class="modal__list"><a href="constructorTeacher.html">Консторуктор курсов</a></div>
                             </div>
                             <div class="modal-menu__icon-list">
                                 <div class="modal__icon">
                                     <ion-icon name="chatbubble"></ion-icon>
                                 </div>
-                                <div class="modal__list"><a href="tasks.html">Задания</a></div>
+                                <div class="modal__list"><a href="#">Задания</a></div>
                             </div>
                             <div class="modal-menu__icon-list">
                                 <div class="modal__icon">
                                     <ion-icon name="people"></ion-icon>
                                 </div>
                                 <div class="modal__list">
-                                    <a href="#">Рейтинг студента</a>
+                                    <a href="portfolio.html">Резюме</a>
                                 </div>
                             </div>
-                            <div class="modal-menu__icon-list">
-                                <div class="modal__icon">
-                                    <ion-icon name="notifications"></ion-icon>
-                                </div>
-                                <div class="modal__list"><a href="notifications.html">Уведомление</a></div>
-                            </div>
+
                         </div>
                     </div>
                 </div>
@@ -147,10 +142,10 @@
                     <section class="window">
                         <section class="journal" data-category="btn-journal">
                             <div class="journal-btn-group">
-                                <button class="journal-practic journal-pad__our">Практика</button>
-                                <button class="journal-lecture journal-pad__our">Лекция</button>
+                                <button class="journal__tab journal-practic journal-pad__our">Практика</button>
+                                <button class="journal__tab journal-lecture journal-pad__our journal__tab-active">Лекция</button>
                             </div>
-                            <table class="journal-table">
+                            <table class="journal-table  practice-table">
                                 <thead>
                                     <th class="journal-fullName">Фио</th>
                                     <th class="journal-date">
@@ -202,7 +197,26 @@
                                 </thead>
                                 <tbody>
                                     <tr>
-                                        <td>1. Арсланова А.А.</td>
+                                        <td class="journal-fullName">hjsfdbfjklnhjfjfkldd</td>
+                                        <td><input type="text" class="journal__input"></td>
+                                        <td><input type="text" class="journal__input"</td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td>4</td>
+                                        <td>5</td>
+                                        <td></td>
+                                    </tr>
+                                    <tr>
+                                        <td class="journal-fullName">1. Арсланова А.А.</td>
                                         <td></td>
                                         <td></td>
                                         <td></td>
@@ -221,7 +235,7 @@
                                         <td></td>
                                     </tr>
                                     <tr>
-                                        <td>1. Арсланова А.А.</td>
+                                        <td class="journal-fullName">1. Арсланова А.А.</td>
                                         <td></td>
                                         <td></td>
                                         <td></td>
@@ -240,7 +254,7 @@
                                         <td></td>
                                     </tr>
                                     <tr>
-                                        <td>1. Арсланова А.А.</td>
+                                        <td class="journal-fullName">1. Арсланова А.А.</td>
                                         <td></td>
                                         <td></td>
                                         <td></td>
@@ -259,7 +273,7 @@
                                         <td></td>
                                     </tr>
                                     <tr>
-                                        <td>1. Арсланова А.А.</td>
+                                        <td class="journal-fullName">1. Арсланова А.А.</td>
                                         <td></td>
                                         <td></td>
                                         <td></td>
@@ -278,7 +292,7 @@
                                         <td></td>
                                     </tr>
                                     <tr>
-                                        <td>1. Арсланова А.А.</td>
+                                        <td class="journal-fullName">1. Арсланова А.А.</td>
                                         <td></td>
                                         <td></td>
                                         <td></td>
@@ -297,7 +311,7 @@
                                         <td></td>
                                     </tr>
                                     <tr>
-                                        <td>1. Арсланова А.А.</td>
+                                        <td class="journal-fullName">1. Арсланова А.А.</td>
                                         <td></td>
                                         <td></td>
                                         <td></td>
@@ -316,7 +330,7 @@
                                         <td></td>
                                     </tr>
                                     <tr>
-                                        <td>1. Арсланова А.А.</td>
+                                        <td class="journal-fullName">1. Арсланова А.А.</td>
                                         <td></td>
                                         <td></td>
                                         <td></td>
@@ -335,7 +349,7 @@
                                         <td></td>
                                     </tr>
                                     <tr>
-                                        <td>1. Арсланова А.А.</td>
+                                        <td class="journal-fullName">1. Арсланова А.А.</td>
                                         <td></td>
                                         <td></td>
                                         <td></td>
@@ -354,7 +368,7 @@
                                         <td></td>
                                     </tr>
                                     <tr>
-                                        <td>1. Арсланова А.А.</td>
+                                        <td class="journal-fullName">1. Арсланова А.А. ajkldkfshbvilaikDSKJFSilsafkjbr</td>
                                         <td></td>
                                         <td></td>
                                         <td></td>
@@ -373,7 +387,7 @@
                                         <td></td>
                                     </tr>
                                     <tr>
-                                        <td>1. Арсланова А.А.</td>
+                                        <td class="journal-fullName">1. Арсланова А.А.</td>
                                         <td></td>
                                         <td></td>
                                         <td></td>
@@ -392,26 +406,7 @@
                                         <td></td>
                                     </tr>
                                     <tr>
-                                        <td>1. Арсланова А.А.</td>
-                                        <td></td>
-                                        <td></td>
-                                        <td></td>
-                                        <td></td>
-                                        <td></td>
-                                        <td></td>
-                                        <td></td>
-                                        <td></td>
-                                        <td></td>
-                                        <td></td>
-                                        <td></td>
-                                        <td></td>
-                                        <td></td>
-                                        <td>4</td>
-                                        <td>5</td>
-                                        <td></td>
-                                    </tr>
-                                    <tr>
-                                        <td>1. Арсланова А.А.</td>
+                                        <td class="journal-fullName">1. Арсланова А.А.</td>
                                         <td></td>
                                         <td></td>
                                         <td></td>
@@ -431,6 +426,291 @@
                                     </tr>
                                 </tbody>
                             </table>
+                            <table class="journal-table lecture-table active">
+                                <thead>
+                                    <th class="journal-fullName">Фио</th>
+                                    <th class="journal-date">
+                                        <div class="journal-date__header">04.09.2023</div>
+                                    </th>
+                                    <th class="journal-date">
+                                        <div class="journal-date__header">04.09.2023</div>
+                                    </th>
+                                    <th class="journal-date">
+                                        <div class="journal-date__header">04.09.2023</div>
+                                    </th>
+                                    <th class="journal-date">
+                                        <div class="journal-date__header">04.09.2023</div>
+                                    </th>
+                                    <th class="journal-date">
+                                        <div class="journal-date__header">04.09.2023</div>
+                                    </th>
+                                    <th class="journal-date">
+                                        <div class="journal-date__header">04.09.2023</div>
+                                    </th>
+                                    <th class="journal-date">
+                                        <div class="journal-date__header">04.09.2023</div>
+                                    </th>
+                                    <th class="journal-date">
+                                        <div class="journal-date__header">04.09.2023</div>
+                                    </th>
+                                    <th class="journal-date">
+                                        <div class="journal-date__header">04.09.2023</div>
+                                    </th>
+                                    <th class="journal-date">
+                                        <div class="journal-date__header">04.09.2023</div>
+                                    </th>
+                                    <th class="journal-date">
+                                        <div class="journal-date__header">04.09.2023</div>
+                                    </th>
+                                    <th class="journal-date">
+                                        <div class="journal-date__header">04.09.2023</div>
+                                    </th>
+                                    <th class="journal-date">
+                                        <div class="journal-date__header">04.09.2023</div>
+                                    </th>
+                                    <th class="journal-date">
+                                        <div class="journal-date__header">04.09.2023</div>
+                                    </th>
+                                    <th class="journal-date">
+                                        <div class="journal-date__header">04.09.2023</div>
+                                    </th>
+                                    <th><button class="journal-create__date">+</button></th>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td class="journal-fullName">fhgj</td>
+                                        <td><input type="text" class="journal__input"></td>
+                                        <td><input type="text" class="journal__input"</td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td>4</td>
+                                        <td>5</td>
+                                        <td></td>
+                                    </tr>
+                                    <tr>
+                                        <td class="journal-fullName">1. Арсланова А.А.</td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td>4</td>
+                                        <td>5</td>
+                                        <td></td>
+                                    </tr>
+                                    <tr>
+                                        <td class="journal-fullName">1. Арсланова А.А.</td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td>4</td>
+                                        <td>5</td>
+                                        <td></td>
+                                    </tr>
+                                    <tr>
+                                        <td class="journal-fullName">1. Арсланова А.А.</td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td>4</td>
+                                        <td>5</td>
+                                        <td></td>
+                                    </tr>
+                                    <tr>
+                                        <td class="journal-fullName">1. Арсланова А.А.</td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td>4</td>
+                                        <td>5</td>
+                                        <td></td>
+                                    </tr>
+                                    <tr>
+                                        <td class="journal-fullName">1. Арсланова А.А.</td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td>4</td>
+                                        <td>5</td>
+                                        <td></td>
+                                    </tr>
+                                    <tr>
+                                        <td class="journal-fullName">1. Арсланова А.А.</td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td>4</td>
+                                        <td>5</td>
+                                        <td></td>
+                                    </tr>
+                                    <tr>
+                                        <td class="journal-fullName">1. Арсланова А.А.</td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td>4</td>
+                                        <td>5</td>
+                                        <td></td>
+                                    </tr>
+                                    <tr>
+                                        <td class="journal-fullName">1. Арсланова А.А.</td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td>4</td>
+                                        <td>5</td>
+                                        <td></td>
+                                    </tr>
+                                    <tr>
+                                        <td class="journal-fullName">1. Арсланова А.А. ajkldkfshbvilaikDSKJFSilsafkjbr</td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td>4</td>
+                                        <td>5</td>
+                                        <td></td>
+                                    </tr>
+                                    <tr>
+                                        <td class="journal-fullName">1. Арсланова А.А.</td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td>4</td>
+                                        <td>5</td>
+                                        <td></td>
+                                    </tr>
+                                    <tr>
+                                        <td class="journal-fullName">1. Арсланова А.А.</td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td>4</td>
+                                        <td>5</td>
+                                        <td></td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                            
+                            <div class="disciple__btn-wrap">
+                                <button class="disciple__btn-save">Сохранить</button>
+                            </div>
                         </section>
                         <section class="statement hidden" data-category="btn-statement">
                             <table class="statement">
@@ -451,10 +731,10 @@
                                         <td>1</td>
                                         <td>Арсланова Анжелика Арсланова</td>
                                         <td>30</td>
-                                        <td>40</td>
+                                        <td><input type="text" class="journal__input"</td>
                                         <td>30</td>
-                                        <td>45</td>
-                                        <td>10</td>
+                                        <td><input type="text" class="journal__input"</td>
+                                        <td><input type="text" class="journal__input"</td>
                                         <td>82.5</td>
                                         <td>отл.</td>
                                         <td><a href="#" class="statement-delete">Удалить</a></td>
@@ -605,6 +885,9 @@
                                     </tr>
                                 </tbody>
                             </table>
+                            <div class="disciple__btn-wrap">
+                                <button class="disciple__btn-save">Сохранить</button>
+                            </div>
                         </section>
                         <section class="tmc hidden" data-category="btn-tmc">
                             <button class="tmc__add">Добавить</button>

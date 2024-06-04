@@ -16,6 +16,24 @@
   background: #fee1ff;
   color: #000;
 }
+.disciple__btn-wrap {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: end;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.disciple__btn-save {
+  width: 133px;
+  height: 53px;
+  border-radius: 10px;
+  border: none;
+  background: rgba(101, 243, 149, 0.4);
+}
 
 .blogTeacher {
   width: 100%;
@@ -57,15 +75,19 @@
 }
 
 .journal-table {
+  display: none;
   width: 90%;
   margin: 0 auto 42px;
   background: #fff9f9;
   border-collapse: collapse;
 }
+.journal-table.active {
+  display: block;
+}
 .journal-table th,
 .journal-table td {
   border: 1px solid black;
-  padding: 5px 0px;
+  padding: 5px 20px;
   text-align: center;
 }
 .journal-date {
@@ -73,10 +95,12 @@
   max-width: 20px;
 }
 .journal-date__header {
-  margin-top: 35px;
-  -webkit-transform: rotate(-90deg);
-          transform: rotate(-90deg);
-  white-space: nowrap;
+  vertical-align: middle;
+  -webkit-writing-mode: vertical-rl;
+      -ms-writing-mode: tb-rl;
+          writing-mode: vertical-rl;
+  -webkit-transform: rotate(180deg);
+          transform: rotate(180deg);
 }
 .journal-pad__our {
   width: 133px;
@@ -86,9 +110,14 @@
 }
 .journal-practic {
   background: rgba(101, 243, 149, 0.4);
+  color: #4b4949;
 }
 .journal-lecture {
   background: rgba(101, 243, 149, 0.4);
+  color: #4b4949;
+}
+.journal-fullName {
+  max-width: 250px;
 }
 .journal-btn-group {
   margin-bottom: 23px;
@@ -99,6 +128,17 @@
       -ms-flex-align: center;
           align-items: center;
   gap: 14px;
+}
+.journal__tab-active {
+  border: 1px solid #000;
+  color: #000;
+}
+.journal__input {
+  border: none;
+  background-color: transparent;
+  outline: none;
+  width: 20px;
+  height: 20px;
 }
 
 .statement {

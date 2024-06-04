@@ -23,29 +23,25 @@
                     </div>
                     <ul class="menu">
                         <li class="menu__list">
-                            <a href="home.html" class="menu__link"><ion-icon name="home"></ion-icon></a>
+                            <a href="home.html" class="menu__link" title="Главная"><ion-icon name="home"></ion-icon></a>
                         </li>
                         <li class="menu__list">
-                            <a href="testing.html" class="menu__link"><ion-icon name="receipt"></ion-icon></a>
+                            <a href="testing.html" class="menu__link" title="Тестирование"><ion-icon name="receipt"></ion-icon></a>
                         </li>
                         <li class="menu__list">
-                            <a href="libraryTeacher.html" class="menu__link"><ion-icon name="book"></ion-icon></a>
+                            <a href="libraryTeacher.html" class="menu__link" title="Библиотека"><ion-icon name="book"></ion-icon></a>
                         </li>
                         <li class="menu__list">
-                            <a href="#" class="menu__link"><ion-icon name="search"></ion-icon></a>
+                            <a href="#" class="menu__link" title="Поиск"><ion-icon name="search"></ion-icon></a>
                         </li>
                         <li class="menu__list">
-                            <a href="courses.html" class="menu__link"><ion-icon name="create"></ion-icon></a>
+                            <a href="constructorTeacher.html" class="menu__link" title="Конструктор курсов"><ion-icon name="create"></ion-icon></a>
                         </li>
                         <li class="menu__list">
-                            <a href="#" class="menu__link"><ion-icon name="chatbubble"></ion-icon></a>
+                            <a href="#" class="menu__link" title="Задания"><ion-icon name="chatbubble"></ion-icon></a>
                         </li>
                         <li class="menu__list">
-                            <a href="#" class="menu__link"><ion-icon name="people"></ion-icon></a>
-                        </li>
-                        <li class="menu__list">
-                            <a href="notifications.html" class="menu__link"><ion-icon
-                                    name="notifications"></ion-icon></a>
+                            <a href="portfolio.html" class="menu__link" title="Резюме"><ion-icon name="people"></ion-icon></a>
                         </li>
                     </ul>
                     <div class="chatbot-darkmode">
@@ -94,54 +90,77 @@
                                 <div class="modal__icon">
                                     <ion-icon name="create"></ion-icon>
                                 </div>
-                                <div class="modal__list"><a href="courses.html">Курсы</a></div>
+                                <div class="modal__list"><a href="constructorTeacher.html">Консторуктор курсов</a></div>
                             </div>
                             <div class="modal-menu__icon-list">
                                 <div class="modal__icon">
                                     <ion-icon name="chatbubble"></ion-icon>
                                 </div>
-                                <div class="modal__list"><a href="tasks.html">Задания</a></div>
+                                <div class="modal__list"><a href="#">Задания</a></div>
                             </div>
                             <div class="modal-menu__icon-list">
                                 <div class="modal__icon">
                                     <ion-icon name="people"></ion-icon>
                                 </div>
                                 <div class="modal__list">
-                                    <a href="#">Рейтинг студента</a>
+                                    <a href="portfolio.html">Резюме</a>
                                 </div>
-                            </div>
-                            <div class="modal-menu__icon-list">
-                                <div class="modal__icon">
-                                    <ion-icon name="notifications"></ion-icon>
-                                </div>
-                                <div class="modal__list"><a href="notifications.html">Уведомление</a></div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </header>
-        <section class="public">
-            <div class="container">
-                <div class="background">
-                    <div class="public__window">
-                        <div class="public__column">
-                            <div class="public__input-wrap">
-                                <input type="text" class="public__input">
-                                <select name="" id="" class="public__select">
-                                    <option value="Категория">Категория</option>
-                                    <option value="">Программирование</option>
-                                    <option value="">Биология</option>
-                                </select>
-                                <input type="text" class="public__input">
-                                <input type="text" class="public__input">
                             </div>
                             
                         </div>
                     </div>
                 </div>
             </div>
+        </header>
+
+        <section class="public">
+            <div class="container">
+                <div class="public__pad">
+                    <div class="public__inner">
+                        <div class="public__flex">
+                            <div class="public__images-block">
+                                <a href="" class="public__file-link">
+                                    <img src="../images/public-book.png" alt="">
+                                </a>
+                            </div>
+                            <div class="public__column">
+                                <input type="text" class="public__input" placeholder="Название" required>
+                                <select name="" class="public__select">
+                                    <option value="">Категория</option>
+                                    <option value="">Биология</option>
+                                    <option value="">География</option>
+                                    <option value="">Геометрия</option>
+                                    <option value=""> История</option>
+                                    <option value="">Информатика</option>
+                                    <option value="">Иностранный язык</option>
+                                    <option value="">Транспорт</option>
+                                    <option value="">Кыргызский язык</option>
+                                    <option value="">Кыргызская литература</option>
+                                    <option value="">Математика</option>
+                                    <option value="">Музыка</option>
+                                    <option value="">Педагогика</option>
+                                    <option value="">Психилогия</option>
+                                    <option value="">Русский язык</option>
+                                    <option value="">Русская литература</option>
+                                    <option value="">Регилигия</option>
+                                    <option value="">Социология</option>
+                                    <option value="">Физика</option>
+                                </select>
+                                <input type="text" class="public__input" placeholder="Автор" required>
+                                <input type="text" class="public__input" placeholder="Описание" required>
+                                <div class="public__button-wrap">
+                                    <button class="public__file-btn">
+                                        <img src="../images/addBook-save.png" alt="">
+                                    </button>
+                                    <button class="public__public-btn">Опубликовать</button>
+                                </div>
+                            </div> 
+                        </div>
+                    </div>
+                </div>
+            </div>
         </section>
+
     </div>
     <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
     <script nomodule src="https://unpkg .com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>

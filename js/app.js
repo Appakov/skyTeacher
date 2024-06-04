@@ -179,7 +179,7 @@ function addQuestion() {
 
     const newSelect = document.createElement('select');
     newSelect.className = 'create__select-choise';
-    newSelect.onchange = function() { updateOptionType(newSelect); };
+    newSelect.onchange = function () { updateOptionType(newSelect); };
 
     const optionRadio = document.createElement('option');
     optionRadio.value = 'radio';
@@ -208,7 +208,7 @@ function addQuestion() {
     const btnAddQuestion = document.createElement('button');
     btnAddQuestion.className = 'create__todo-btn btn-add-question';
     btnAddQuestion.title = 'Добавить вопрос';
-    btnAddQuestion.onclick = function() { addQuestion(); };
+    btnAddQuestion.onclick = function () { addQuestion(); };
     const imgAddQuestion = document.createElement('img');
     imgAddQuestion.src = '../images/create-add-question.png';
     imgAddQuestion.alt = '';
@@ -218,7 +218,7 @@ function addQuestion() {
     const btnAddOption = document.createElement('button');
     btnAddOption.className = 'create__todo-btn btn-add-option';
     btnAddOption.title = 'Добавить вариант';
-    btnAddOption.onclick = function() { addOption(btnAddOption); };
+    btnAddOption.onclick = function () { addOption(btnAddOption); };
     const iconAddOption = document.createElement('ion-icon');
     iconAddOption.name = 'add-circle';
     iconAddOption.style.width = '40px';
@@ -229,7 +229,7 @@ function addQuestion() {
     const btnCopy = document.createElement('button');
     btnCopy.className = 'create__todo-btn btn-copy';
     btnCopy.title = 'Создать копию';
-    btnCopy.onclick = function() { copyQuestion(btnCopy); };
+    btnCopy.onclick = function () { copyQuestion(btnCopy); };
     const imgCopy = document.createElement('img');
     imgCopy.src = '../images/create-save-question.png';
     imgCopy.alt = '';
@@ -239,7 +239,7 @@ function addQuestion() {
     const btnAddImage = document.createElement('button');
     btnAddImage.className = 'create__todo-btn btn-add-image';
     btnAddImage.title = 'Добавить картинку';
-    btnAddImage.onclick = function() { addImageToQuestion(btnAddImage); };
+    btnAddImage.onclick = function () { addImageToQuestion(btnAddImage); };
     const imgAddImage = document.createElement('img');
     imgAddImage.src = '../images/create-add-image.png';
     imgAddImage.alt = '';
@@ -249,7 +249,7 @@ function addQuestion() {
     const btnDeleteQuestion = document.createElement('button');
     btnDeleteQuestion.className = 'create__todo-btn btn-delete-question';
     btnDeleteQuestion.title = 'Удалить вопрос';
-    btnDeleteQuestion.onclick = function() { deleteQuestion(btnDeleteQuestion); };
+    btnDeleteQuestion.onclick = function () { deleteQuestion(btnDeleteQuestion); };
     const imgDeleteQuestion = document.createElement('img');
     imgDeleteQuestion.src = '../images/create-delete-question.png';
     imgDeleteQuestion.alt = '';
@@ -427,3 +427,27 @@ function deleteImageFromQuestion(button) {
         console.log('Контейнер для изображения не найден');
     }
 }
+
+const constructorAddModul = document.querySelector('.constructor__add-modul')
+const constructorModulColumn = document.querySelector('.constructor__modul-column')
+const constructorModulWrap = document.querySelector('.constructor__modul-wrap')
+const constructorModulDirection = document.querySelector('.constructor__modul-direction')
+const constructorModulInner = document.querySelector('.constructor__modul-inner')
+const constructorModulCreate = document.querySelector('.constructor__modul-create')
+// const constructorModulDelete = document.querySelector('.constructor__modul-delete')
+
+document.addEventListener('DOMContentLoaded', function () {
+    const tabs = document.querySelectorAll('.journal__tab');
+    const tables = document.querySelectorAll('.journal-table');
+
+    tabs.forEach((tab, index) => {
+        tab.addEventListener('click', () => {
+            tabs.forEach(t => t.classList.remove('journal__tab-active'));
+            tab.classList.add('journal__tab-active');
+
+            tables.forEach(table => table.classList.remove('active'));
+            tables[index].classList.add('active');
+        });
+    });
+});
+

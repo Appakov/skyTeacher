@@ -8,7 +8,7 @@
         font-size: 14px;
         width: 129px;
         height: 54px;
-       
+
 
         &.active {
             border-radius: 3px;
@@ -16,6 +16,20 @@
             background: #fee1ff;
             color: #000;
         }
+    }
+
+    &__btn-wrap {
+        display: flex;
+        justify-content: end;
+        align-items: center;
+    }
+
+    &__btn-save {
+        width: 133px;
+        height: 53px;
+        border-radius: 10px;
+        border: none;
+        background: rgba(101, 243, 149, 0.4);
     }
 }
 
@@ -52,17 +66,21 @@
 .journal {
 
     &-table {
+        display: none;
         width: 90%;
         margin: 0 auto 42px;
         background: #fff9f9;
-
         border-collapse: collapse;
+        &.active{
+            display: block;
+        }
 
         th,
         td {
             border: 1px solid black;
-            padding: 5px 0px;
+            padding: 5px 20px;
             text-align: center;
+            
         }
 
     }
@@ -74,9 +92,9 @@
     }
 
     &-date__header {
-        margin-top: 35px;
-        transform: rotate(-90deg);
-        white-space: nowrap;
+        vertical-align: middle;
+        writing-mode: vertical-rl;
+        transform: rotate(180deg);
     }
 
     &-pad__our {
@@ -88,18 +106,33 @@
 
     &-practic {
         background: rgba(101, 243, 149, 0.4);
+        color: #4b4949;
     }
 
     &-lecture {
         background: rgba(101, 243, 149, 0.4);
+        color: #4b4949;
     }
-
+    &-fullName{
+        max-width: 250px;
+    }
     &-btn-group {
         margin-bottom: 23px;
         display: flex;
         align-items: center;
         gap: 14px;
 
+    }
+    &__tab-active{
+        border: 1px solid #000;
+        color: #000;
+    }
+    &__input{
+        border: none;
+        background-color: transparent;
+        outline: none;
+        width: 20px;
+        height: 20px;
     }
 }
 
@@ -121,7 +154,8 @@
         padding: 10px;
         text-align: center;
     }
-    &-delete{
+
+    &-delete {
         color: #09F575;
     }
 
@@ -129,10 +163,12 @@
 
 .exercise {
     &-table {
+        // display: none;
         width: 70%;
         margin: 0 auto 42px;
         border-collapse: collapse;
         background: #fff9f9;
+        
 
         th {
             border: 1px solid black;
@@ -188,12 +224,13 @@
         }
     }
 }
-.tmc{
-    &__add{
-    width: 135px;
-    height: 40px;
-    border-radius: 3px;
-    background-color: rgba(101, 243, 149, 0.4);
-    border: none;
+
+.tmc {
+    &__add {
+        width: 135px;
+        height: 40px;
+        border-radius: 3px;
+        background-color: rgba(101, 243, 149, 0.4);
+        border: none;
     }
 }
