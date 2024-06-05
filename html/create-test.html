@@ -136,8 +136,7 @@
                             <div class="create__column">
                                 <div class="create__type-select">
                                     <textarea name="" id="" class="create__textarea" placeholder="Вопрос"></textarea>
-                                    <select name="" id="" class="create__select-choise"
-                                        onchange="updateOptionType(this)">
+                                    <select name="" id="" class="create__select-choise" onchange="changeOptionType(this)">
                                         <option value="default">Выберите</option>
                                         <option value="radio">Один из списка</option>
                                         <option value="checkbox">Выбрать несколько</option>
@@ -147,38 +146,31 @@
                                 <div class="option-item__column">
                                     <div class="option-item">
                                         <input type="checkbox" class="option-checkbox">
-                                        <div class="content-editable" contenteditable="true"></div>
+                                        <div class="content-editable" contenteditable="true" ></div>
                                         <input type="file" class="file-input" accept="image/*" style="display:none;">
                                         <button class="add-image-btn" onclick="addImage(this)"><img src="../images/image-variable.png" alt=""></button>
-                                        <button class="delete-option-btn" onclick="deleteOption(this)"><img src="../images/delete-variable.png" alt=""></button>
+                                        <button class="delete-option-btn" onclick="deleteOption(this)" disabled><img src="../images/delete-variable.png" alt=""></button>
                                     </div>
-                                    
                                 </div>
                             </div>
                             <div class="create__todo-func">
-                                <button class="create__todo-btn btn-add-question" title="Добавить вопрос"
-                                    onclick="addQuestion()">
+                                <button class="create__todo-btn btn-add-question" title="Добавить вопрос" onclick="addQuestion()">
                                     <img src="../images/create-add-question.png" alt="">
                                 </button>
-                                <button class="create__todo-btn btn-add-option" title="Добавить вариант"
-                                    onclick="addOption(this)">
+                                <button class="create__todo-btn btn-add-option" title="Добавить вариант" onclick="addOption(this)">
                                     <ion-icon name="add-circle" style="width: 40px; height: 40px;"></ion-icon>
                                 </button>
-                                <button class="create__todo-btn btn-copy" title="Создать копию"
-                                    onclick="copyQuestion(this)">
+                                <button class="create__todo-btn btn-copy" title="Создать копию" onclick="copyQuestion(this)">
                                     <img src="../images/create-save-question.png" alt="">
                                 </button>
-                                <button class="create__todo-btn btn-add-image" title="Добавить картинку"
-                                    onclick="addImageToQuestion(this)">
+                                <button class="create__todo-btn btn-add-image" title="Добавить картинку к вопросу" onclick="addImageToQuestion(this)">
                                     <img src="../images/create-add-image.png" alt="">
                                 </button>
-                                <button class="create__todo-btn btn-delete-question" title="Удалить вопрос"
-                                    onclick="deleteQuestion(this)">
+                                <button class="create__todo-btn btn-delete-question" title="Удалить вопрос" onclick="deleteQuestion(this)">
                                     <img src="../images/create-delete-question.png" alt="">
                                 </button>
-                                <button class="create__todo-btn btn-delete-img" title="Удалить картинку у вопроса"
-                                    onclick="deleteImageFromQuestion(this)"><ion-icon name="trash-outline"
-                                        style="width: 40px; height: 40px;"></ion-icon></button>
+                                <button class="create__todo-btn btn-delete-img" title="Удалить картинку у вопроса" onclick="deleteQuestionImage(this)"><img
+                                        src="../images/delete-variable.png" alt=""></button>
                             </div>
                         </div>
                     </div>
