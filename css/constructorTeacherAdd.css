@@ -213,14 +213,19 @@
   margin-bottom: 10px;
 }
 .constructor__add-wrap {
+  width: 90%;
+  margin: 0 auto;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: end;
-      -ms-flex-pack: end;
-          justify-content: end;
-  margin-right: 40px;
-  margin-bottom: 27px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin-bottom: 10px;
+  height: 40px;
 }
 .constructor__add-modul {
   font-weight: 600;
@@ -250,18 +255,35 @@
   border-radius: 15px;
 }
 .constructor__modul-wrap {
-  padding: 26px 20px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 30px;
   width: 95%;
   margin: 0 auto;
-  border: 1px solid #545252;
-  border-radius: 10px;
+}
+.constructor__file-img img {
+  max-width: 190px;
+  max-height: 70px;
+  width: auto;
+  height: auto;
+}
+.constructor__file-img .pdf-icon {
+  display: block;
+  width: 50px;
+  height: 70px;
+  background: url("../images/efault-file-constructor.png") no-repeat center center;
+  background-size: contain;
 }
 .constructor__modul-title {
   font-weight: 700;
   font-size: 17px;
   color: #9a1274;
   text-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.25);
-  margin-bottom: 12px;
 }
 .constructor__modul-inner {
   border: 1px solid #545252;
@@ -328,12 +350,12 @@
 .constructor__modul-lesson1 {
   height: 35px;
   border-radius: 10px;
-  width: 200px;
+  width: 154px;
 }
 .constructor__modul-lesson2 {
   height: 35px;
   border-radius: 10px;
-  width: 300px;
+  width: 250px;
 }
 .constructor__modul-lesson3 {
   height: 35px;
@@ -344,6 +366,9 @@
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   gap: 10px;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
@@ -407,6 +432,14 @@
   color: #0c0c0c;
 }
 .modul-add__column {
+  height: 350px;
+  overflow-y: auto;
+  border: 1px solid #545252;
+  border-radius: 3px;
+  background: #fffefe;
+}
+.modul-add__column-modul {
+  margin-top: 20px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -414,9 +447,5 @@
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  height: 350px;
-  overflow-y: auto;
-  border: 1px solid #545252;
-  border-radius: 3px;
-  background: #fffefe;
+  gap: 40px;
 }

@@ -153,7 +153,8 @@
                         </select>
                         <input type="text" class="constructor__course" placeholder="Курс">
                         <input class="constructor__course-direction" placeholder="Информатика">
-                        <input class="constructor__course-description" type="text" placeholder="Это комплексная, техническая ">
+                        <input class="constructor__course-description" type="text"
+                            placeholder="Это комплексная, техническая ">
 
                         <div class="constructor__count-flex">
                             <input type="text" class="constructor__count-modul" placeholder="3 модуля">
@@ -177,9 +178,59 @@
         <section class="modul-add">
             <div class="container">
                 <div class="modul-add__column">
-
+                    <div class="modul-add__column-modul">
+                        <div class="modul-add__block">
+                            <div class="constructor__add-wrap">
+                                <h4 class="constructor__modul-title">1 Модуль</h4>
+                                <button class="constructor__add-modul">Добавить модуль</button>
+                            </div>
+                            <div class="constructor__modul-wrap">
+                                <div class="constructor__modul-new">
+                                    <div class="constructor__modul-direction">
+                                        <div class="constructor__modul-inner">
+                                            <div class="constructor__input-block">
+                                                <p class="constructor__modul-number">1</p>
+                                                <div class="constructor__modul-label">
+                                                    <label for="constructor__modul-name">Название</label>
+                                                    <input type="text" class="constructor__modul-lesson1" id="constructor__modul-name">
+                                                </div>
+                                                <div class="constructor__modul-label">
+                                                    <label for="constructor__modul-description">Описание</label>
+                                                    <input type="text" class="constructor__modul-lesson2" id="constructor__modul-description">
+                                                </div>
+                                                <div class="constructor__modul-label">
+                                                    <label for="constructor__modul-select">Тип урока</label>
+                                                    <select name="" id="constructor__modul-select" class="constructor__modul-lesson3">
+                                                        <option value="Лаб">Лаб</option>
+                                                        <option value="Лек">Лек</option>
+                                                    </select>
+                                                </div>
+                                            </div>
+                                            <div class="constructor__modul-function">
+                                                <div class="constructor__file-img"></div>
+                                                <input type="file" class="constructor__file-input" style="display: none;">
+                                                <button class="constructor__modul-attach constructor__modul-btn" title="Прикрепить файл">
+                                                    <img src="../images/attach-constuctor.png" alt="">
+                                                </button>
+                                                <button class="constructor__modul-complete constructor__modul-btn" title="Редактировать">
+                                                    <img src="../images/edit-func.png" alt="">
+                                                </button>
+                                                <button class="constructor__modul-create constructor__modul-btn"><img
+                                                        src="../images/plus-constructor.png" alt=""></button>
+                                                <button class="constructor__modul-delete constructor__modul-btn">
+                                                    <img src="../images/delete-constuctor.png" alt="">
+                                                </button>
+                                            </div>
+                                        </div>
+                                        <div class="constructor__modul-save">
+                                            <button class="constructor__btn-save">Сохранить</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-            </div>
         </section>
     </div>
     <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>

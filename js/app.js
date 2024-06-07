@@ -699,3 +699,123 @@ document.addEventListener('DOMContentLoaded', function () {
         }
     });
 });
+
+//Конструктор курсов 
+
+
+document.addEventListener('DOMContentLoaded', function () {
+    // Функция для добавления нового блока модуля
+    function addModule() {
+        // Клонирование первого блока модуля
+        const modulColumn = document.querySelector('.modul-add__column-modul');
+        const newBlock = modulColumn.querySelector('.modul-add__block').cloneNode(true);
+
+        // Удаление всех дополнительных блоков constructor__modul-direction, кроме первого
+        const firstModulDirection = newBlock.querySelector('.constructor__modul-direction');
+        newBlock.querySelectorAll('.constructor__modul-direction').forEach((modulDirection, index) => {
+            if (index > 0) modulDirection.remove();
+        });
+
+        // Очистка значений в единственном оставшемся блоке constructor__modul-direction
+        firstModulDirection.querySelectorAll('.constructor__modul-inner').forEach((innerBlock, index) => {
+            if (index > 0) innerBlock.remove();
+        });
+
+        // Обновление заголовка модуля (но не номера)
+        const modulNumber = modulColumn.querySelectorAll('.modul-add__block').length + 1;
+        newBlock.querySelector('.constructor__modul-title').innerText = `${modulNumber} Модуль`;
+
+        // Очистка значений в клонированном блоке
+        newBlock.querySelector('.constructor__modul-lesson1').value = '';
+        newBlock.querySelector('.constructor__modul-lesson2').value = '';
+        newBlock.querySelector('.constructor__modul-lesson3').selectedIndex = 0;
+        newBlock.querySelector('.constructor__file-img').innerHTML = '';
+        newBlock.querySelector('.constructor__file-input').value = '';
+
+        // Добавление клонированного блока в колонку
+        modulColumn.appendChild(newBlock);
+
+        // Привязка обработчиков событий к новым кнопкам
+        newBlock.querySelector('.constructor__add-modul').addEventListener('click', addModule);
+        attachFileListener(newBlock);
+        newBlock.querySelector('.constructor__modul-create').addEventListener('click', addInnerBlock);
+        newBlock.querySelector('.constructor__modul-delete').addEventListener('click', removeModuleDirection);
+    }
+
+    // Функция для добавления нового блока constructor__modul-new
+    function addInnerBlock() {
+        const moduleWrap = this.closest('.constructor__modul-wrap');
+        const innerBlock = moduleWrap.querySelector('.constructor__modul-new').cloneNode(true);
+
+        // Очистка значений в клонированном блоке
+        innerBlock.querySelector('.constructor__modul-lesson1').value = '';
+        innerBlock.querySelector('.constructor__modul-lesson2').value = '';
+        innerBlock.querySelector('.constructor__modul-lesson3').selectedIndex = 0;
+        innerBlock.querySelector('.constructor__file-img').innerHTML = '';
+        innerBlock.querySelector('.constructor__file-input').value = '';
+
+        // Обновление номера модуля
+        const modulNumber = moduleWrap.querySelectorAll('.constructor__modul-new').length + 1;
+        innerBlock.querySelector('.constructor__modul-number').innerText = modulNumber;
+
+        // Добавление клонированного блока в wrap
+        moduleWrap.appendChild(innerBlock);
+
+        // Привязка обработчиков событий к новым кнопкам
+        attachFileListener(innerBlock);
+        innerBlock.querySelector('.constructor__modul-create').addEventListener('click', addInnerBlock);
+        innerBlock.querySelector('.constructor__modul-delete').addEventListener('click', removeModuleDirection);
+    }
+
+    // Функция для привязки слушателей к файлам
+    function attachFileListener(block) {
+        const attachButton = block.querySelector('.constructor__modul-attach');
+        const fileInput = block.querySelector('.constructor__file-input');
+        const fileImgContainer = block.querySelector('.constructor__file-img');
+
+        attachButton.addEventListener('click', function () {
+            fileInput.click();
+        });
+
+        fileInput.addEventListener('change', function () {
+            const file = fileInput.files[0];
+            if (file) {
+                const reader = new FileReader();
+                reader.onload = function (e) {
+                    const fileType = file.type;
+                    if (fileType.startsWith('image/')) {
+                        fileImgContainer.innerHTML = `<img src="${e.target.result}" alt="Attached Image">`;
+                    } else if (fileType === 'application/pdf') {
+                        fileImgContainer.innerHTML = `<div class="pdf-icon"></div>`;
+                    }
+                };
+                reader.readAsDataURL(file);
+            }
+        });
+    }
+
+    // Функция для удаления блока constructor__modul-new, если он не единственный
+    function removeModuleDirection() {
+        const moduleWrap = this.closest('.constructor__modul-wrap');
+        const moduleNew = this.closest('.constructor__modul-new');
+        const allModuleNew = moduleWrap.querySelectorAll('.constructor__modul-new');
+
+        if (allModuleNew.length > 1) {
+            moduleNew.remove();
+        } else {
+            console.log("Этот модульный блок не может быть удален, так как он единственный.");
+        }
+    }
+
+    // Привязка начальных обработчиков событий
+    document.querySelector('.constructor__add-modul').addEventListener('click', addModule);
+    document.querySelectorAll('.constructor__modul-create').forEach(function (button) {
+        button.addEventListener('click', addInnerBlock);
+    });
+    document.querySelectorAll('.constructor__modul-delete').forEach(function (button) {
+        button.addEventListener('click', removeModuleDirection);
+    });
+    document.querySelectorAll('.modul-add__block').forEach(function (block) {
+        attachFileListener(block);
+    });
+});

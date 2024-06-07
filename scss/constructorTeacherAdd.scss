@@ -221,11 +221,13 @@
     }
 
     &__add-wrap {
+        width: 90%;
+        margin: 0 auto;
         display: flex;
-        justify-content: end;
-        margin-right: 40px;
-        margin-bottom: 27px;
-
+        align-items: center;
+        justify-content: space-between;
+        margin-bottom: 10px;
+        height: 40px;
     }
 
     &__add-modul {
@@ -266,12 +268,28 @@
     // .constructor__modul-wrap
 
     &__modul-wrap {
-        padding: 26px 20px;
+        display: flex;
+        flex-direction: column;
+        gap: 30px;
         width: 95%;
         margin: 0 auto;
-        border: 1px solid #545252;
-        border-radius: 10px;
     }
+
+    &__file-img {
+        img{
+            max-width: 190px;
+            max-height: 70px;
+            width: auto;
+            height: auto;
+        }
+        .pdf-icon{
+            display: block;
+            width: 50px;
+            height: 70px;
+            background: url('../images/efault-file-constructor.png') no-repeat center center;
+            background-size: contain;
+        }
+        }
 
     // .constructor__modul-title
 
@@ -280,7 +298,6 @@
         font-size: 17px;
         color: #9a1274;
         text-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.25);
-        margin-bottom: 12px;
     }
 
     // .constructor__modul-inner
@@ -341,13 +358,13 @@
     &__modul-lesson1 {
         height: 35px;
         border-radius: 10px;
-        width: 200px;
+        width: 154px;
     }
 
     &__modul-lesson2 {
         height: 35px;
         border-radius: 10px;
-        width: 300px;
+        width: 250px;
     }
 
     &__modul-lesson3 {
@@ -360,6 +377,7 @@
 
     &__modul-function {
         display: flex;
+        align-items: center;
         gap: 10px;
         justify-content: space-between;
         cursor: pointer;
@@ -461,12 +479,17 @@
     // .modul-add__column
 
     &__column {
-        display: flex;
-        flex-direction: column;
         height: 350px;
         overflow-y: auto;
         border: 1px solid #545252;
         border-radius: 3px;
         background: #fffefe;
+    }
+
+    &__column-modul {
+        margin-top: 20px;
+        display: flex;
+        flex-direction: column;
+        gap: 40px;
     }
 }
